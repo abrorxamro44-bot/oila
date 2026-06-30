@@ -437,3 +437,12 @@ body {
 .joriy-vaqt .timeline-sana {
     color: #10b981;
 }
+/* Asosiy sahifadagi rasm (abror.jpg) uchun stil */
+img {
+    max-width: 100%;    /* Rasm ekrandan chiqib ketmaydi */
+    height: auto;       /* Proporsiyasi buzilmaydi */
+    border-radius: 15px; /* Burchaklarini chiroyli, yumaloq qiladi */
+    display: block;     /* Markazga olish uchun kerak */
+    margin: 20px auto;  /* Tepadan/pastdan joy tashlab, o'rtaga oladi */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Chiroyli soya beradi */
+}
