@@ -1,0 +1,439 @@
+/* Umumiy sozlamalar (Toza va tiniq ko'rinish uchun) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8fafc; /* Juda toza va och fon */
+    color: #1e293b; /* To'q kulrang, ko'zni charchatmaydigan matn */
+    padding-bottom: 60px;
+}
+
+/* Yuqori qism (Header) dizayni */
+.sayt-boshi {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Yorqin ko'k rangli chiroyli gradient */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 20px rgba(29, 78, 216, 0.15);
+}
+
+.sayt-boshi h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.sayt-boshi p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Bo'limlar konteyneri */
+.konteyner {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Havolani to'g'rilash */
+.bolim-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Har bitta bo'lim kartasi */
+.bolim {
+    background: white;
+    border-radius: 20px; /* Yumshoq burchaklar */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); /* Tiniq, bilinmas soya */
+    border: 1px solid #e2e8f0; /* Yupqa chiroyli chegara */
+    width: 340px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sichqoncha kelganda karta daxshat effekt beradi */
+.bolim:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #3b82f6;
+}
+
+/* Rasm bloki */
+.rasm-blok {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.rasm-blok img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+/* Rasm hali qo'yilmaganda orqada turadigan tiniq matn */
+.rasm-yoq {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 1rem;
+    z-index: 1;
+    border: 2px dashed #cbd5e1;
+    border-radius: 14px;
+}
+
+/* Sarlavhalar va matn */
+.bolim h2 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.bolim p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    height: 70px; /* Matnlar bir xil tekislikda turishi uchun */
+}
+
+/* Kirish tugmasi */
+.kirish-tugma {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.bolim:hover .kirish-tugma {
+    color: #1d4ed8;
+}
+
+/* --- ICHKI SAHIFALAR UCHUN TINIQ DIZAYN --- */
+.ichki-sahifa {
+    max-width: 700px;
+    margin: 80px auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.ichki-sahifa h1 {
+    color: #0f172a;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.ichki-sahifa p {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* Ortga qaytish tugmasi */
+.orqaga-tugma {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #0f172a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.orqaga-tugma:hover {
+    background-color: #1e293b;
+}
+/* Farzandlar qismi uchun dizayn */
+.kichik-sarlavha {
+    color: #0f172a;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.farzandlar-konteyner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.farzand-karta {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 25px 20px 20px 20px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+/* Uylangan / Erga tekkan degan kichik yozuvlar */
+.status-belgi {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10b981; /* Yashil rang */
+    color: white;
+    padding: 3px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Abrorning kartasi (Navbatdagi) maxsus effekti */
+.navbat-karta {
+    border: 2px solid #3b82f6;
+    background: #f0f7ff;
+}
+
+.navbat-belgi {
+    background: #3b82f6; /* Ko'k rang */
+}
+
+.farzand-karta h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.farzand-karta .yil-info {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.farzand-matn {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.font-hazil strong {
+    color: #1d4ed8;
+}
+/* Sevgi tarixi bloki uchun maxsus dizayn */
+.sevgi-tarixi {
+    background: linear-gradient(135deg, #fff5f5, #fff0f6);
+    border: 1px dashed #f43f5e;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 580px;
+    margin: 30px auto 40px auto;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.05);
+}
+
+.sevgi-tarixi h3 {
+    color: #e11d48;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.sevgi-tarixi p {
+    color: #4c0519;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-indent: 0 !important; /* Bir xil chiziqda turishi uchun */
+}
+
+.sevgi-tarixi p strong {
+    color: #e11d48;
+}
+/* Tergovchi (Adolat) bloki uchun maxsus ko'k-to'q rangli dizayn */
+.tergovchi-blok {
+    background: #1e293b;
+    color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+}
+
+.tergovchi-blok h3 {
+    color: #3b82f6;
+}
+
+.tergovchi-blok p {
+    color: #cbd5e1;
+}
+
+.tergovchi-blok p dashed {
+    color: white;
+}
+/* Abrorning shaxsiy sahifasi uchun dizaynlar */
+.shaxsiy-info h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.sport-status {
+    font-weight: 600;
+    color: #3b82f6;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.mening-tarixim {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+}
+
+.info-blok {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+}
+
+.info-blok h3 {
+    color: #0f172a;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* Sport (MMA/Boks) bloki uchun qora/ko'k kuchli dizayn */
+.sport-blok {
+    background: #0f172a;
+    color: #f8fafc;
+    border: none;
+}
+
+.sport-blok h3 {
+    color: #3b82f6;
+}
+
+.sport-blok p {
+    color: #cbd5e1;
+}
+
+/* Tergovchi bloki uchun to'q va qonuniy ko'k dizayn */
+.tergovchi-blok {
+    background: #1e293b;
+    color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+}
+
+.tergovchi-blok h3 {
+    color: #3b82f6;
+}
+
+.tergovchi-blok p {
+    color: #cbd5e1;
+}
+
+/* 2026-yil xronologiyasi dizayni */
+.timeline-konteyner {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto 40px auto;
+    padding-left: 30px;
+    border-left: 3px solid #e2e8f0;
+    text-align: left;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    background: #cbd5e1;
+    border-radius: 50%;
+    border: 3px solid #f8fafc;
+}
+
+.timeline-sana {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.timeline-item h4 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.joriy-vaqt {
+    border: 1px solid #10b981;
+    background: #f0fdf4;
+}
+
+.joriy-vaqt::before {
+    background: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.joriy-vaqt .timeline-sana {
+    color: #10b981;
+}
